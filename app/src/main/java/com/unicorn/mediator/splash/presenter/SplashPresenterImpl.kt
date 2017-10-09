@@ -23,7 +23,10 @@ class SplashPresenterImpl(private val view: SplashView) : SplashPresenter {
         with(view as BaseAct) {
             Observable.just("")
                     .delay(2, TimeUnit.SECONDS)
-                    .subscribe { startAct(MainAct::class.java) }
+                    .subscribe {
+                        startAct(MainAct::class.java)
+                        finish()
+                    }
         }
     }
 

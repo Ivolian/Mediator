@@ -1,10 +1,9 @@
 package com.unicorn.mediator.app.view
 
 import activitystarter.ActivityStarter
-import activitystarter.Arg
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.marcinmoskala.activitystarter.argExtra
+
 
 abstract class BaseAct : AppCompatActivity() {
 
