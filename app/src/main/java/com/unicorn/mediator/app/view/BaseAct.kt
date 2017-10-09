@@ -1,4 +1,4 @@
-package com.unicorn.mediator
+package com.unicorn.mediator.app.view
 
 import activitystarter.ActivityStarter
 import activitystarter.Arg

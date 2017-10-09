@@ -1,7 +1,7 @@
 package com.unicorn.mediator.splash.presenter
 
-import com.unicorn.mediator.BaseAct
-import com.unicorn.mediator.MainAct
+import com.unicorn.mediator.app.view.BaseAct
+import com.unicorn.mediator.main.MainAct
 import com.unicorn.mediator.splash.view.SplashView
 import com.unicorn.mediator.startAct
 import io.reactivex.Observable

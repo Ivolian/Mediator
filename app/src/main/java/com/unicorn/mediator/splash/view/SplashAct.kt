@@ -3,8 +3,8 @@ package com.unicorn.mediator.splash.view
 import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.jaeger.library.StatusBarUtil
-import com.unicorn.mediator.BaseAct
 import com.unicorn.mediator.R
+import com.unicorn.mediator.app.view.BaseAct
 import com.unicorn.mediator.splash.presenter.SplashPresenter
 import com.unicorn.mediator.splash.presenter.SplashPresenterImpl
 import kotlinx.android.synthetic.main.act_splash.*
