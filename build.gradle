@@ -2,6 +2,15 @@
 
 buildscript {
     ext.kotlin_version = '1.1.51'
+    ext.support_version = '26.1.0'
+    ext.dagger_version = '2.11'
+    ext.rxjava_version = "2.1.4"
+    ext.rxandroid_version = '2.0.1'
+    ext.rxkotlin_version = '2.1.0'
+    ext.glide_version = "4.1.1"
+    ext.BRVAH_version = "2.9.31"
+    ext.okhttp_version = '3.9.0'
+    ext.retrofit_version = '2.3.0'
 
     repositories {
         google()
