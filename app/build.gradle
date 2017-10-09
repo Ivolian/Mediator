@@ -36,8 +36,16 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.github.bumptech.glide:glide:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_version"
-    implementation 'com.blankj:utilcode:1.9.0'
-    compile 'com.jaeger.statusbarutil:library:1.4.0'
+    implementation ('com.blankj:utilcode:1.9.0')
+    implementation ('com.jaeger.statusbarutil:library:1.4.0',{
+        exclude group: 'com.android.support'
+    })
+    compile 'com.marcinmoskala.activitystarter:activitystarter:1.00'
+    compile 'com.marcinmoskala.activitystarter:activitystarter-kotlin:1.00'
+    kapt 'com.marcinmoskala.activitystarter:activitystarter-compiler:1.00'
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
 
 }
 repositories {

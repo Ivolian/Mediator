@@ -1,4 +1,4 @@
-package com.unicorn.mediator
+package com.unicorn.mediator.app
 
 import android.app.Application
 import com.blankj.utilcode.util.Utils
