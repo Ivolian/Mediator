@@ -3,9 +3,8 @@ package com.unicorn.mediator.news.model.repository
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.unicorn.mediator.AssetUtil
 import com.unicorn.mediator.news.model.entity.News
-import java.io.BufferedReader
-import java.io.InputStreamReader
 
 
 /*
@@ -14,29 +13,9 @@ import java.io.InputStreamReader
 class NewsRepositoryImpl(private var context: Context) : NewsRepository {
 
     override fun get(): List<News> {
-        val json = readJson()
+        val json = AssetUtil.readJson(context, "news.json")
         val type = object : TypeToken<List<News>>() {}.type
-
         return Gson().fromJson<List<News>>(json, type)
-
-//        var news = Gson().fromJson(json, News::class.java)
-//        return listOf(news)
     }
-
-    private fun readJson(): String {
-        val fileName = "news.json"
-        val bufferReader = BufferedReader(InputStreamReader(context.assets.open(fileName)))
-        val stringBuilder = StringBuilder()
-        while (true) {
-            val line = bufferReader.readLine()
-            if (line == null) {
-                break
-            } else {
-                stringBuilder.append(line)
-            }
-        }
-        return stringBuilder.toString()
-    }
-
 
 }
