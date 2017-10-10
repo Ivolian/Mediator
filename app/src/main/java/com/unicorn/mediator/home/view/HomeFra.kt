@@ -43,7 +43,7 @@ class HomeFra : BaseFra(), HomeView {
 //        }
     }
 
-    override fun render(s: List<MultiItemEntity>) {
-        homeAdapter.setNewData(s)
+    override fun render(list: List<MultiItemEntity>) {
+        homeAdapter.setNewData(list)
     }
 }
