@@ -28,7 +28,7 @@
         tools:ignore="RtlHardcoded,SpUsage" />
 
     <TextView
-        android:id="@+id/tvLiuLanLiang"
+        android:id="@+id/tvBiaoQian1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"

@@ -7,6 +7,6 @@ import com.unicorn.mediator.news.model.entity.News
  */
 interface NewsView {
 
-    fun render(newsList: List<News>)
+    fun renderNewsList(newsList: List<News>)
 
 }

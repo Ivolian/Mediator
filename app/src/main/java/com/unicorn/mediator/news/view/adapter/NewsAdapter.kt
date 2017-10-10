@@ -16,7 +16,7 @@ class NewsAdapter : BaseQuickAdapter<News, BVH>(R.layout.item_news) {
     @SuppressLint("SetTextI18n")
     override fun convert(bvh: BVH, news: News) {
         bvh.tvName.text = news.name
-        bvh.tvLiuLanLiang.text = "浏览${news.liulanliang}次"
+        bvh.tvBiaoQian1.text = "浏览${news.liulanliang}次"
         bvh.tvCreateTime.text = news.createtime_replace
         news.suoluetu[0].let {
             Glide.with(mContext).load(it.attached).into(bvh.ivSuoLueTu)
