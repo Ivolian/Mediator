@@ -1,4 +1,4 @@
-package com.unicorn.mediator
+package com.unicorn.mediator.app
 
 import android.content.Context
 import java.io.BufferedReader

@@ -1,5 +1,8 @@
 package com.unicorn.mediator.news.model.entity
 
+import com.chad.library.adapter.base.entity.MultiItemEntity
+import com.unicorn.mediator.home.model.HomeItemType
+
 
 class News(
         val id: String, //115
@@ -14,7 +17,9 @@ class News(
         val narong_replace: String,
         val shifushipin_replace: String, //否
         val leixing_replace: String //快讯
-)
+) : MultiItemEntity {
+    override fun getItemType() = HomeItemType.NEWS.ordinal
+}
 
 class Suoluetu(
         val id: String, //25450

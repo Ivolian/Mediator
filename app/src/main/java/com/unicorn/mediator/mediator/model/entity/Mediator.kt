@@ -1,5 +1,8 @@
 package com.unicorn.mediator.mediator.model.entity
 
+import com.chad.library.adapter.base.entity.MultiItemEntity
+import com.unicorn.mediator.home.model.HomeItemType
+
 /**
  * Created by ivotai on 2017/10/10/010.
  */
@@ -52,7 +55,9 @@ data class Mediator(
 		val yonghuleixing_really: String, //2
 		val djs_anjian_num: String, //14
 		val tjz_anjian_num: Int //0
-)
+):MultiItemEntity{
+	override fun getItemType() = HomeItemType.MEDIATOR.ordinal
+}
 
 data class Attr(
 		val touxiang: List<Touxiang>

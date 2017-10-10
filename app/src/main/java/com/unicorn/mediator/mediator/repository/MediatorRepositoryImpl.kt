@@ -3,7 +3,7 @@ package com.unicorn.mediator.mediator.repository
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.unicorn.mediator.AssetUtil
+import com.unicorn.mediator.app.AssetUtil
 import com.unicorn.mediator.mediator.model.entity.Mediator
 
 
