@@ -9,8 +9,6 @@ import kotlinx.android.synthetic.main.act_main.*
 import me.majiajie.pagerbottomtabstrip.item.NormalItemView
 
 
-
-
 class MainAct : BaseAct() {
 
     override val layoutResId = R.layout.act_main
