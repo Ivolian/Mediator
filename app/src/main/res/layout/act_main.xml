@@ -15,6 +15,17 @@
         android:textColor="@color/md_white"
         tools:ignore="HardcodedText,SpUsage" />
 
+    <com.unicorn.mediator.main.MainPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/md_grey_300" />
+
     <me.majiajie.pagerbottomtabstrip.PageNavigationView
         android:id="@+id/tab"
         android:layout_width="match_parent"

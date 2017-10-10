@@ -8,13 +8,9 @@ import io.reactivex.Observable
 import java.util.concurrent.TimeUnit
 
 
-/**
-* Created by ivotai on 2017/10/9/009.
-*/
 class SplashPresenterImpl(private val view: SplashView) : SplashPresenter {
 
     override fun onViewCreated() {
-        view.hideStatusBar()
         view.renderSplashBg()
         startMainAct()
     }

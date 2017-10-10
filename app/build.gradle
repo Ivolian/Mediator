@@ -46,10 +46,8 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
-    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$BRVAH_version"
-    compile('com.github.niorgai:StatusBarCompat:2.1.4', {
-        exclude group: 'com.android.support'
-    })
+//    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$BRVAH_version"
+
     compile 'me.majiajie:pager-bottom-tab-strip:2.2.4'
     compile 'com.wada811:android-material-design-colors:3.0.0'
     implementation 'com.google.code.gson:gson:2.8.2'

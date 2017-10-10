@@ -9,6 +9,8 @@ import kotlinx.android.synthetic.main.act_main.*
 import me.majiajie.pagerbottomtabstrip.item.NormalItemView
 
 
+
+
 class MainAct : BaseAct() {
 
     override val layoutResId = R.layout.act_main
@@ -17,11 +19,8 @@ class MainAct : BaseAct() {
     }
 
     override fun initView(savedInstanceState: Bundle?) {
-        initTab()
-//        StatusBarCompat.translucentStatusBar(this
-    }
-
-    private fun initTab() {
+        viewPager.offscreenPageLimit = 5 - 1
+        viewPager.adapter = MainPagerAdapter(supportFragmentManager)
         val navigationController = tab.custom()
                 .addItem(newItem(R.mipmap.home_unchecked, R.mipmap.home_checked, "首页"))
                 .addItem(newItem(R.mipmap.mediateapply_unchecked, R.mipmap.mediateapply_checked, "申请调解"))
@@ -29,6 +28,7 @@ class MainAct : BaseAct() {
                 .addItem(newItem(R.mipmap.coshow_unchecked, R.mipmap.coshow_checked, "朋友圈"))
                 .addItem(newItem(R.mipmap.my_unchecked, R.mipmap.my_checked, "个人"))
                 .build()
+        navigationController.setupWithViewPager(viewPager)
     }
 
     private fun newItem(@DrawableRes drawable: Int, @DrawableRes checkedDrawable: Int, title: String) = NormalItemView(this).apply {
@@ -39,4 +39,5 @@ class MainAct : BaseAct() {
 
     override fun bindPresenter() {
     }
+
 }
