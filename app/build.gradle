@@ -52,7 +52,7 @@ dependencies {
         implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$BRVAH_version"
     compile 'net.danlew:android.joda:2.9.9'
     compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
-    compile 'com.android.support.constraint:constraint-layout:1.1.0-beta2'
+    compile 'com.android.support.constraint:constraint-layout:1.1.0-beta3'
     compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
     compile 'de.hdodenhof:circleimageview:2.1.0'
 }

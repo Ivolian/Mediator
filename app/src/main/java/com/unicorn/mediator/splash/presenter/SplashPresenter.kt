@@ -1,11 +1,8 @@
 package com.unicorn.mediator.splash.presenter
 
+import com.unicorn.mediator.app.presenter.BasePresenter
 
-/**
-* Created by ivotai on 2017/10/9/009.
-*/
-interface SplashPresenter{
 
-    fun onViewCreated()
+interface SplashPresenter : BasePresenter
 
-}
+

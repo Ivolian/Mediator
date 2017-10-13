@@ -19,9 +19,9 @@ abstract class BaseAct : AppCompatActivity() {
 
     abstract val layoutResId: Int
 
-    abstract fun injectDependencies()
+    protected open fun injectDependencies(){}
 
-    abstract fun initView(savedInstanceState: Bundle?)
+    protected open  fun initView(savedInstanceState: Bundle?){}
 
     abstract fun bindPresenter()
 

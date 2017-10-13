@@ -1,6 +1,5 @@
 package com.unicorn.mediator.splash.view
 
-import android.os.Bundle
 import com.bumptech.glide.Glide
 import com.unicorn.mediator.R
 import com.unicorn.mediator.app.view.BaseAct
@@ -13,15 +12,7 @@ class SplashAct : BaseAct(), SplashView {
 
     override val layoutResId = R.layout.act_splash
 
-    override fun injectDependencies() {
-        // do nothing
-    }
-
-    override fun initView(savedInstanceState: Bundle?) {
-        // do nothing
-    }
-
-    private val presenter: SplashPresenter = SplashPresenterImpl(this)
+    private val presenter: SplashPresenter by lazy { SplashPresenterImpl(this) }
 
     override fun bindPresenter() {
         presenter.onViewCreated()
