@@ -6,13 +6,13 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 
-public class MainPager extends android.support.v4.view.ViewPager {
+public class NoTouchPager extends android.support.v4.view.ViewPager {
 
-    public MainPager(Context context) {
+    public NoTouchPager(Context context) {
         super(context);
     }
 
-    public MainPager(Context context, AttributeSet attrs) {
+    public NoTouchPager(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

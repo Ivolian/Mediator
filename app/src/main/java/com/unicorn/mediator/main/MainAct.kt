@@ -1,7 +1,7 @@
 package com.unicorn.mediator.main
 
 import android.os.Bundle
-import android.support.annotation.DrawableRes
+import android.support.v4.view.ViewPager
 import com.unicorn.mediator.R
 import com.unicorn.mediator.app.view.BaseAct
 import com.unicorn.mediator.color
@@ -13,29 +13,33 @@ class MainAct : BaseAct() {
 
     override val layoutResId = R.layout.act_main
 
-    override fun injectDependencies() {
-    }
+    private val tabs = listOf(
+            Triple(R.mipmap.home_unchecked, R.mipmap.home_checked, "首页"),
+            Triple(R.mipmap.mediateapply_unchecked, R.mipmap.mediateapply_checked, "申请调解"),
+            Triple(R.mipmap.message_unchecked, R.mipmap.message_checked, "消息"),
+            Triple(R.mipmap.coshow_unchecked, R.mipmap.coshow_checked, "朋友圈"),
+            Triple(R.mipmap.my_unchecked, R.mipmap.my_checked, "个人")
+    )
 
     override fun initView(savedInstanceState: Bundle?) {
-        viewPager.offscreenPageLimit = 5 - 1
-        viewPager.adapter = MainPagerAdapter(supportFragmentManager)
-        val navigationController = tab.custom()
-                .addItem(newItem(R.mipmap.home_unchecked, R.mipmap.home_checked, "首页"))
-                .addItem(newItem(R.mipmap.mediateapply_unchecked, R.mipmap.mediateapply_checked, "申请调解"))
-                .addItem(newItem(R.mipmap.message_unchecked, R.mipmap.message_checked, "消息"))
-                .addItem(newItem(R.mipmap.coshow_unchecked, R.mipmap.coshow_checked, "朋友圈"))
-                .addItem(newItem(R.mipmap.my_unchecked, R.mipmap.my_checked, "个人"))
-                .build()
-        navigationController.setupWithViewPager(viewPager)
+        initTab(initViewPager())
     }
 
-    private fun newItem(@DrawableRes drawable: Int, @DrawableRes checkedDrawable: Int, title: String) = NormalItemView(this).apply {
-        initialize(drawable, checkedDrawable, title)
-        setTextDefaultColor(color(R.color.md_grey_600))
-        setTextCheckedColor(color(R.color.colorAccent))
+    private fun initViewPager() = viewPager.apply {
+        offscreenPageLimit = tabs.size - 1
+        adapter = MainPagerAdapter(supportFragmentManager)
     }
 
-    override fun bindPresenter() {
+    private fun initTab(vp: ViewPager) {
+        tab.custom().apply {
+            for (tab in tabs) {
+                addItem(NormalItemView(this@MainAct).apply {
+                    initialize(tab.first, tab.second, tab.third)
+                    setTextDefaultColor(color(R.color.md_grey_600))
+                    setTextCheckedColor(color(R.color.colorAccent))
+                })
+            }
+        }.build().setupWithViewPager(vp)
     }
 
 }

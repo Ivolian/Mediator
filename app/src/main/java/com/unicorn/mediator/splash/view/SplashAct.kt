@@ -17,7 +17,7 @@ class SplashAct : BaseAct(), SplashView {
         presenter.onViewCreated()
     }
 
-    override fun renderSplashBg() {
+    override fun renderBg() {
         Glide.with(this).load(R.mipmap.splash_bg).into(splashBg)
     }
 

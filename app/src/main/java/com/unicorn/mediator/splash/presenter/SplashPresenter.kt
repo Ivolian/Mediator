@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit
 class SplashPresenter(private val view: SplashView) : BasePresenter {
 
     override fun onViewCreated() {
-        view.renderSplashBg()
+        view.renderBg()
         toMain()
     }
 
