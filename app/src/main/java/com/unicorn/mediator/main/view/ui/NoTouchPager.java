@@ -1,4 +1,4 @@
-package com.unicorn.mediator.main;
+package com.unicorn.mediator.main.view.ui;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

@@ -8,18 +8,18 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="区域调解员"
-        android:textSize="18dp"
-        android:gravity="center"
         android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="区域调解员"
         android:textColor="@color/md_white"
+        android:textSize="18dp"
         tools:ignore="HardcodedText,SpUsage" />
 
-    <com.unicorn.mediator.main.NoTouchPager
+    <com.unicorn.mediator.main.view.ui.NoTouchPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1" />
 
     <View
         android:layout_width="match_parent"
@@ -29,7 +29,6 @@
     <me.majiajie.pagerbottomtabstrip.PageNavigationView
         android:id="@+id/tab"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="#FFF" />
+        android:layout_height="56dp" />
 
 </LinearLayout>
