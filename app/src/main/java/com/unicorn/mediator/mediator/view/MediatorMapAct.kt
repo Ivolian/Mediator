@@ -31,24 +31,31 @@ class MediatorMapAct : BaseMapAct(), MediatorMapView {
         }
     }
 
-    override fun renderMediatorMarker(mediators: List<Mediator>) {
-        mediators.forEach {
-            val markerOption = MarkerOptions()
-            markerOption.position(it.latLng)
-            markerOption.icon(BitmapDescriptorFactory.fromBitmap(BitmapFactory
-                    .decodeResource(resources, R.mipmap.position_mediater)))
-            map.addMarker(markerOption)
+    override fun renderMarkers(mediators: List<Mediator>) {
+        mediators.forEachIndexed { index, mediator ->
+            map.addMarker(MarkerOptions().apply {
+                title(index.toString())
+                position(mediator.latLng)
+                icon(BitmapDescriptorFactory.fromBitmap(
+                        BitmapFactory.decodeResource(resources, R.mipmap.position_mediater)))
+            })
         }
     }
 
-    private val presenter = MediatorMapPresenter(this, ComponentsHolder.appComponent.getMediatorRepository())
+    override fun renderMediator(mediator: Mediator) {
+
+    }
+
+    private val presenter = MediatorMapPresenter(this,
+            ComponentsHolder.appComponent.getMediatorRepository())
 
     override fun bindPresenter() {
         map.apply {
             setOnMyLocationChangeListener { location ->
                 presenter.showMediatorsOnMap(location)
-                setOnMyLocationChangeListener {  }
+                setOnMyLocationChangeListener { }
             }
+            setOnMarkerClickListener { marker -> presenter.onMarkerClick(marker) }
         }
         presenter.onViewCreated()
     }

@@ -7,6 +7,8 @@ interface MediatorMapView {
 
     fun renderMap()
 
-    fun renderMediatorMarker(mediators: List<Mediator>)
+    fun renderMarkers(mediators: List<Mediator>)
+
+    fun renderMediator(mediator:Mediator)
 
 }

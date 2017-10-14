@@ -14,16 +14,16 @@ class MediatorMapPresenter(private val view: MediatorMapView, private val repo: 
         view.renderMap()
     }
 
-    lateinit var list:List<Mediator>
+    lateinit var list: List<Mediator>
 
     fun showMediatorsOnMap(location: Location) {
-        list = repo.get(location).apply { view.renderMediatorMarker(this) }
+        list = repo.get(location).apply { view.renderMarkers(this) }
     }
 
-    fun onMarkClick(marker: Marker){
+    fun onMarkerClick(marker: Marker): Boolean {
         val index = marker.title.toInt()
-        val me = list[index]
-
+        view.renderMediator(list[index])
+        return true
     }
 
 }
