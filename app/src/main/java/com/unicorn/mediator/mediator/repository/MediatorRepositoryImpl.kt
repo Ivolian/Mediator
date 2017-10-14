@@ -22,8 +22,8 @@ class MediatorRepositoryImpl(private val context: Context, private val gson: Gso
     }
 
     private fun dis(): Double {
-        val min = -0.4
-        val max = 0.4
+        val min = -0.02
+        val max = 0.02
         return min + (max - min) * Random().nextDouble()
     }
 
