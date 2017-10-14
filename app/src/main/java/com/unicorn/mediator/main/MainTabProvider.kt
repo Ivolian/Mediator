@@ -3,7 +3,7 @@ package com.unicorn.mediator.main
 import com.unicorn.mediator.R
 
 
-object TabProvider {
+object MainTabProvider {
 
      val TABS = listOf(
             Triple(R.mipmap.home_unchecked, R.mipmap.home_checked, "首页"),

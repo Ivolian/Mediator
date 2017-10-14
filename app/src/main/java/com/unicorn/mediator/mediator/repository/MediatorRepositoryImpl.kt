@@ -7,15 +7,11 @@ import com.unicorn.mediator.app.AssetUtil
 import com.unicorn.mediator.mediator.model.entity.Mediator
 
 
-/**
- * Created by ivotai on 2017/10/10/010.
- */
-class MediatorRepositoryImpl(private val context: Context) : MediatorRepository {
+class MediatorRepositoryImpl(private val context: Context, private val gson: Gson) : MediatorRepository {
 
     override fun get(): List<Mediator> {
         val json = AssetUtil.readJson(context, "mediator.json")
-        val type = object : TypeToken<List<Mediator>>() {}.type
-        return Gson().fromJson<List<Mediator>>(json, type)
+        return gson.fromJson<List<Mediator>>(json,  object : TypeToken<List<Mediator>>() {}.type)
     }
 
 }

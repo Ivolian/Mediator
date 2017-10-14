@@ -1,6 +1,7 @@
 package com.unicorn.mediator.app.inject.module
 
 import android.content.Context
+import com.google.gson.Gson
 import com.unicorn.mediator.app.App
 import com.unicorn.mediator.home.repository.HomeRepository
 import com.unicorn.mediator.home.repository.HomeRepositoryImpl
@@ -21,15 +22,19 @@ class AppModule(val app: App) {
 
     @Singleton
     @Provides
-    fun NewsRepository(context: Context): NewsRepository = NewsRepositoryImpl(context)
+    fun gson(): Gson = Gson()
 
     @Singleton
     @Provides
-    fun MediatorRepository(context: Context): MediatorRepository = MediatorRepositoryImpl(context)
+    fun newsRepository(context: Context, gson: Gson): NewsRepository = NewsRepositoryImpl(context, gson)
 
     @Singleton
     @Provides
-    fun HomeRepository(newsRepository: NewsRepository, mediatorRepository: MediatorRepository):HomeRepository
-            = HomeRepositoryImpl(newsRepository, mediatorRepository)
+    fun nediatorRepository(context: Context, gson: Gson): MediatorRepository = MediatorRepositoryImpl(context, gson)
+
+    @Singleton
+    @Provides
+    fun homeRepository(newsRepo: NewsRepository, mediatorRepo: MediatorRepository):
+            HomeRepository = HomeRepositoryImpl(newsRepo, mediatorRepo)
 
 }

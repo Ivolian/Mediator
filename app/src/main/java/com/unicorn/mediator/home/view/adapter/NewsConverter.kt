@@ -1,4 +1,4 @@
-package com.unicorn.mediator.news.view
+package com.unicorn.mediator.home.view.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context

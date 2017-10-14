@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.unicorn.mediator.R
 import com.unicorn.mediator.app.view.BaseAct
 import com.unicorn.mediator.color
-import com.unicorn.mediator.main.TabProvider.TABS
+import com.unicorn.mediator.main.MainTabProvider.TABS
 import com.unicorn.mediator.main.view.adapter.MainPagerAdapter
 import kotlinx.android.synthetic.main.act_main.*
 import me.majiajie.pagerbottomtabstrip.item.NormalItemView

@@ -1,4 +1,4 @@
-package com.unicorn.mediator.mediator.view
+package com.unicorn.mediator.home.view.adapter
 
 import android.content.Context
 import com.bumptech.glide.Glide

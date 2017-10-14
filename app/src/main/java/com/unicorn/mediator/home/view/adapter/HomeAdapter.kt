@@ -7,9 +7,7 @@ import com.unicorn.mediator.app.view.adapter.BVH
 import com.unicorn.mediator.home.model.entity.Title
 import com.unicorn.mediator.home.view.renderer.TitleConverter
 import com.unicorn.mediator.mediator.model.entity.Mediator
-import com.unicorn.mediator.mediator.view.MediatorItemRenderer
 import com.unicorn.mediator.news.model.entity.News
-import com.unicorn.mediator.news.view.NewsConverter
 
 
 class HomeAdapter : BaseQuickAdapter<Any, BVH>(null) {
