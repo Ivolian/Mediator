@@ -1,7 +1,7 @@
 package com.unicorn.mediator.home.view
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.GridLayoutManager
 import com.unicorn.mediator.R
 import com.unicorn.mediator.addDecor
 import com.unicorn.mediator.app.inject.ComponentsHolder
@@ -14,19 +14,18 @@ import kotlinx.android.synthetic.main.fra_home.*
 
 class HomeFra : BaseFra(), HomeView {
 
-
     override val layoutResId = R.layout.fra_home
-
-
-
 
     override fun initView(savedInstanceState: Bundle?) {
         initRecyclerView()
     }
 
     private fun initRecyclerView() {
+        val topCount = 4
+        val spanCount = 2
         recyclerView.apply {
-            layoutManager = LinearLayoutManager(context)
+            homeAdapter.setSpanSizeLookup { _, pos -> if (pos < topCount) 1 else spanCount }
+            layoutManager = GridLayoutManager(context, spanCount)
             adapter = homeAdapter
             addDecor()
         }
@@ -38,7 +37,7 @@ class HomeFra : BaseFra(), HomeView {
         presenter.onViewCreated()
         homeAdapter.setOnItemChildClickListener { _, _, pos ->
             homeAdapter.getItem(pos).apply {
-                if (this is Mediator){
+                if (this is Mediator) {
                     presenter.applyForMediation(this)
                 }
             }
@@ -50,4 +49,5 @@ class HomeFra : BaseFra(), HomeView {
     override fun render(list: List<Any>) {
         homeAdapter.setNewData(list)
     }
+
 }

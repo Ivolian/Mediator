@@ -12,8 +12,8 @@ class HomeRepositoryImpl(private val newsRepo: NewsRepository, private val media
     override fun get() = ArrayList<Any>().apply {
         add(Top("智能咨询", R.mipmap.consult))
         add(Top("找调解员", R.mipmap.mediater))
-        add(Top("找律师", R.mipmap.layer))
-        add(Top("找专家", R.mipmap.expert))
+        add(Top("找律师  ", R.mipmap.layer))
+        add(Top("找专家  ", R.mipmap.expert))
         add(Title("资讯", R.mipmap.kuaixun))
         addAll(newsRepo.get())
         add(Title("优秀调解员", R.mipmap.mediater2))
