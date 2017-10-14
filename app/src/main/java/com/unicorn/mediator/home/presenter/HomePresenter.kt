@@ -6,7 +6,7 @@ import com.unicorn.mediator.home.repository.HomeRepository
 import com.unicorn.mediator.home.view.HomeFra
 import com.unicorn.mediator.home.view.HomeView
 import com.unicorn.mediator.mediator.model.entity.Mediator
-import com.unicorn.mediator.mediator.view.MapAct
+import com.unicorn.mediator.mediator.view.MediatorAct
 import com.unicorn.mediator.startAct
 
 
@@ -21,7 +21,7 @@ class HomePresenter(private val view: HomeView, private val repository: HomeRepo
     }
 
     fun lookForMediator() {
-        (view as HomeFra).startAct(MapAct::class.java)
+        (view as HomeFra).startAct(MediatorAct::class.java)
     }
 
 }
