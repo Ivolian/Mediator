@@ -4,13 +4,13 @@ import android.content.Context
 import com.bumptech.glide.Glide
 import com.unicorn.mediator.app.view.Converter
 import com.unicorn.mediator.app.view.adapter.BVH
-import com.unicorn.mediator.home.model.entity.Title
-import kotlinx.android.synthetic.main.item_title.*
+import com.unicorn.mediator.home.model.entity.Top
+import kotlinx.android.synthetic.main.item_top.*
 
 
-class TitleConverter(private val context: Context) : Converter<Title> {
+class TopConverter(private val context: Context) : Converter<Top> {
 
-    override fun convert(bvh: BVH, entity: Title) {
+    override fun convert(bvh: BVH, entity: Top) {
         bvh.apply {
             Glide.with(context).load(entity.resId).into(imageView)
             tvText.text = entity.text
