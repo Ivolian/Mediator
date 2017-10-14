@@ -6,14 +6,14 @@ import com.unicorn.mediator.home.repository.HomeRepository
 import com.unicorn.mediator.home.view.HomeFra
 import com.unicorn.mediator.home.view.HomeView
 import com.unicorn.mediator.mediator.model.entity.Mediator
-import com.unicorn.mediator.mediator.view.MediatorAct
+import com.unicorn.mediator.mediator.view.MediatorMapAct
 import com.unicorn.mediator.startAct
 
 
-class HomePresenter(private val view: HomeView, private val repository: HomeRepository) : BasePresenter {
+class HomePresenter(private val view: HomeView, private val repo: HomeRepository) : BasePresenter {
 
     override fun onViewCreated() {
-        view.render(repository.get())
+        view.render(repo.get())
     }
 
      fun applyForMediation(mediator: Mediator) {
@@ -21,7 +21,7 @@ class HomePresenter(private val view: HomeView, private val repository: HomeRepo
     }
 
     fun lookForMediator() {
-        (view as HomeFra).startAct(MediatorAct::class.java)
+        (view as HomeFra).startAct(MediatorMapAct::class.java)
     }
 
 }

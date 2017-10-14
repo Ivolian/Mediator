@@ -1,7 +1,10 @@
 package com.unicorn.mediator.mediator.model.entity
 
+import com.amap.api.maps.model.LatLng
+
 
 class Mediator(
+        var latLng: LatLng,
         val id: String, //30078
         val orderno: String, //000009
         val shifouzhiding: String, //0

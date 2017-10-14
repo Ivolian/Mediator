@@ -34,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".main.view.MainAct"/>
-        <activity android:name=".mediator.view.MediatorAct"/>
+        <activity android:name=".mediator.view.MediatorMapAct"/>
     </application>
 
 </manifest>

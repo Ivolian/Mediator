@@ -1,8 +1,8 @@
-package com.unicorn.mediator.mediator.view
+package com.unicorn.mediator.app.view
 
 import android.os.Bundle
 import com.unicorn.mediator.app.view.BaseAct
-import kotlinx.android.synthetic.main.act_map.*
+import kotlinx.android.synthetic.main.act_mediator_map.*
 
 
 abstract class BaseMapAct : BaseAct() {
