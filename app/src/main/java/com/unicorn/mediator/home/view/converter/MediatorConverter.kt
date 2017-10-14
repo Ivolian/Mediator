@@ -12,16 +12,14 @@ import kotlinx.android.synthetic.main.item_mediator.*
 class MediatorConverter(private val context: Context) : Converter<Mediator> {
 
     override fun convert(bvh: BVH, entity: Mediator) {
-        with(bvh) {
+        bvh.apply {
+            Glide.with(context).load( entity.attr.touxiang[0].attached).into(ivTouXiang)
             tvName.text = entity.name
             val list = entity.biaoqian_replace.split(",")
-            tvLiuLanLiang.text = list[0]
-            tvBiaoQian2.text = list[1]
-            tvBiaoQian3.text = list[2]
-            entity.attr.touxiang[0].let {
-                Glide.with(context).load(it.attached).into(ivTouXiang)
-            }
-            addOnClickListener(R.id.tvApplyMediation)
+            tvTag1.text = list[0]
+            tvTag2.text = list[1]
+            tvTag3.text = list[2]
+            addOnClickListener(R.id.tvApplyForMediation)
         }
     }
 

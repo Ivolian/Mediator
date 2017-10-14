@@ -10,7 +10,7 @@
         android:layout_height="56dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="区域调解员"
+        android:text="首页"
         android:textColor="@color/md_white"
         android:textSize="18dp"
         tools:ignore="HardcodedText,SpUsage" />
@@ -27,9 +27,9 @@
         android:background="@color/md_grey_300" />
 
     <me.majiajie.pagerbottomtabstrip.PageNavigationView
-        android:background="@color/md_grey_100"
         android:id="@+id/tab"
         android:layout_width="match_parent"
-        android:layout_height="56dp" />
+        android:layout_height="56dp"
+        android:background="@color/md_white" />
 
 </LinearLayout>

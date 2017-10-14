@@ -6,8 +6,9 @@ import com.unicorn.mediator.R
 import com.unicorn.mediator.addDecor
 import com.unicorn.mediator.app.inject.ComponentsHolder
 import com.unicorn.mediator.app.view.BaseFra
-import com.unicorn.mediator.home.presenter.HomePresenterImpl
+import com.unicorn.mediator.home.presenter.HomePresenter
 import com.unicorn.mediator.home.view.adapter.HomeAdapter
+import com.unicorn.mediator.mediator.model.entity.Mediator
 import kotlinx.android.synthetic.main.fra_home.*
 
 
@@ -17,7 +18,7 @@ class HomeFra : BaseFra(), HomeView {
     override val layoutResId = R.layout.fra_home
 
 
-    // ===
+
 
     override fun initView(savedInstanceState: Bundle?) {
         initRecyclerView()
@@ -31,15 +32,17 @@ class HomeFra : BaseFra(), HomeView {
         }
     }
 
-    private val presenter by lazy {
-        HomePresenterImpl(this, ComponentsHolder.appComponent.getHomeRepository())
-    }
+    private val presenter by lazy { HomePresenter(this, ComponentsHolder.appComponent.getHomeRepository()) }
 
     override fun bindPresenter() {
         presenter.onViewCreated()
-//        mediatorAdapter.setOnItemChildClickListener { _, _, position ->
-//            mediatorAdapter.getItem(position)?.let { presenter.applyForMediation(it) }
-//        }
+        homeAdapter.setOnItemChildClickListener { _, _, pos ->
+            homeAdapter.getItem(pos).apply {
+                if (this is Mediator){
+                    presenter.applyForMediation(this)
+                }
+            }
+        }
     }
 
     private var homeAdapter = HomeAdapter()

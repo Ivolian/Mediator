@@ -6,13 +6,13 @@ import com.unicorn.mediator.mediator.repository.MediatorRepository
 import com.unicorn.mediator.news.model.repository.NewsRepository
 
 
-class HomeRepositoryImpl(private val newsRepository: NewsRepository, private val mediatorRepository: MediatorRepository) : HomeRepository {
+class HomeRepositoryImpl(private val newsRepo: NewsRepository, private val mediatorRepo: MediatorRepository) : HomeRepository {
 
     override fun get() = ArrayList<Any>().apply {
         add(Title("资讯", R.mipmap.kuaixun))
-        addAll(newsRepository.get())
+        addAll(newsRepo.get())
         add(Title("优秀调解员", R.mipmap.mediater2))
-        addAll(mediatorRepository.get())
+        addAll(mediatorRepo.get())
     }
 
 }
