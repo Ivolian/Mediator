@@ -2,7 +2,6 @@ package com.unicorn.mediator.home.view
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
-import com.chad.library.adapter.base.entity.MultiItemEntity
 import com.unicorn.mediator.R
 import com.unicorn.mediator.addDecor
 import com.unicorn.mediator.app.view.BaseFra
@@ -43,7 +42,7 @@ class HomeFra : BaseFra(), HomeView {
 //        }
     }
 
-    override fun render(list: List<MultiItemEntity>) {
+    override fun render(list: List<Any>) {
         homeAdapter.setNewData(list)
     }
 }
