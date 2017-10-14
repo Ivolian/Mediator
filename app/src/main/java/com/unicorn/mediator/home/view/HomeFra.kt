@@ -13,16 +13,18 @@ import kotlinx.android.synthetic.main.fra_home.*
 
 class HomeFra : BaseFra(), HomeView {
 
+
     override val layoutResId = R.layout.fra_home
 
-    override fun injectDependencies() {
 
-    }
-
-    var homeAdapter = HomeAdapter()
+    // ===
 
     override fun initView(savedInstanceState: Bundle?) {
-        with(recyclerView) {
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = homeAdapter
             addDecor()
@@ -36,9 +38,11 @@ class HomeFra : BaseFra(), HomeView {
     override fun bindPresenter() {
         presenter.onViewCreated()
 //        mediatorAdapter.setOnItemChildClickListener { _, _, position ->
-//            mediatorAdapter.getItem(position)?.let { presenter.onApplyMediation(it) }
+//            mediatorAdapter.getItem(position)?.let { presenter.applyForMediation(it) }
 //        }
     }
+
+    private var homeAdapter = HomeAdapter()
 
     override fun render(list: List<Any>) {
         homeAdapter.setNewData(list)

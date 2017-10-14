@@ -1,14 +1,11 @@
 package com.unicorn.mediator.home.presenter
 
+import com.unicorn.mediator.app.presenter.BasePresenter
 import com.unicorn.mediator.mediator.model.entity.Mediator
 
-/**
- * Created by ivotai on 2017/10/10/010.
- */
-interface HomePresenter {
 
-    fun onViewCreated()
+interface HomePresenter : BasePresenter {
 
-    fun onApplyMediation(mediator: Mediator)
+    fun applyForMediation(mediator: Mediator)
 
 }

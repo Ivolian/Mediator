@@ -10,8 +10,7 @@ import android.view.ViewGroup
 abstract class BaseFra : Fragment() {
 
     final override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(layoutResId, container, false)
-        return view
+        return inflater.inflate(layoutResId, container, false)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
@@ -20,16 +19,12 @@ abstract class BaseFra : Fragment() {
         bindPresenter()
     }
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//    }
-//
     abstract val layoutResId: Int
 
-    abstract fun injectDependencies()
+    protected open fun injectDependencies() {}
 
-    abstract fun initView(savedInstanceState: Bundle?)
+    protected open fun initView(savedInstanceState: Bundle?) {}
 
-    abstract fun bindPresenter()
+    protected open fun bindPresenter() {}
 
 }
