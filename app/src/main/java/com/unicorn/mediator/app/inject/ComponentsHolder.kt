@@ -13,7 +13,7 @@ object ComponentsHolder {
         ComponentsHolder.app = app
     }
 
-    private val appComponent by lazy {
+     val appComponent by lazy {
         DaggerAppComponent.builder()
                 .appModule(AppModule(app))
                 .build()
