@@ -6,6 +6,7 @@ import com.unicorn.mediator.R
 import com.unicorn.mediator.addDecor
 import com.unicorn.mediator.app.inject.ComponentsHolder
 import com.unicorn.mediator.app.view.BaseFra
+import com.unicorn.mediator.home.model.entity.Top
 import com.unicorn.mediator.home.presenter.HomePresenter
 import com.unicorn.mediator.home.view.adapter.HomeAdapter
 import com.unicorn.mediator.mediator.model.entity.Mediator
@@ -35,10 +36,15 @@ class HomeFra : BaseFra(), HomeView {
 
     override fun bindPresenter() {
         presenter.onViewCreated()
-        homeAdapter.setOnItemChildClickListener { _, _, pos ->
-            homeAdapter.getItem(pos).apply {
-                if (this is Mediator) {
-                    presenter.applyForMediation(this)
+        homeAdapter.apply {
+            setOnItemChildClickListener { _, _, pos ->
+                getItem(pos).apply {
+                    if (this is Mediator) {
+                        presenter.applyForMediation(this)
+                    }
+                    if (this is Top && this.text == "找调解员") {
+                        presenter.lookForMediator()
+                    }
                 }
             }
         }

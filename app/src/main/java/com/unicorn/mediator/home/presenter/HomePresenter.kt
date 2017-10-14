@@ -17,5 +17,9 @@ class HomePresenter(private val view: HomeView, private val repository: HomeRepo
         ToastUtils.showShort(mediator.name)
     }
 
+    fun lookForMediator() {
+        ToastUtils.showShort("找调解员")
+    }
+
 }
 
