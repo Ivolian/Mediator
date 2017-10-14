@@ -5,11 +5,11 @@ import com.chad.library.adapter.base.util.MultiTypeDelegate
 import com.unicorn.mediator.R
 import com.unicorn.mediator.app.view.adapter.BVH
 import com.unicorn.mediator.home.model.entity.Title
-import com.unicorn.mediator.home.view.renderer.TitleItemRenderer
+import com.unicorn.mediator.home.view.renderer.TitleConverter
 import com.unicorn.mediator.mediator.model.entity.Mediator
 import com.unicorn.mediator.mediator.view.MediatorItemRenderer
 import com.unicorn.mediator.news.model.entity.News
-import com.unicorn.mediator.news.view.NewsItemRenderer
+import com.unicorn.mediator.news.view.NewsConverter
 
 
 class HomeAdapter : BaseQuickAdapter<Any, BVH>(null) {
@@ -31,15 +31,14 @@ class HomeAdapter : BaseQuickAdapter<Any, BVH>(null) {
 
     override fun convert(bvh: BVH, entity: Any) {
         when (entity) {
-            is Title -> TitleItemRenderer(mContext).render(bvh, entity)
-            is News -> NewsItemRenderer(mContext).render(bvh, entity)
-            is Mediator -> MediatorItemRenderer(mContext).render(bvh, entity)
+            is Title -> TitleConverter(mContext).convert(bvh, entity)
+            is News -> NewsConverter(mContext).convert(bvh, entity)
+            is Mediator -> MediatorItemRenderer(mContext).convert(bvh, entity)
         }
     }
-
 }
 
-enum class HomeItemType {
+private enum class HomeItemType {
     TOP,
     TITLE,
     NEWS,

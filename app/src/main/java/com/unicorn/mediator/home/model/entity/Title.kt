@@ -1,7 +1,6 @@
 package com.unicorn.mediator.home.model.entity
 
+import android.support.annotation.DrawableRes
 
-/**
- * Created by ivotai on 2017/10/10/010.
- */
-class Title(var resId: Int, var title: String)
+
+class Title(val title: String, @DrawableRes val resId: Int)

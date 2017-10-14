@@ -55,6 +55,8 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.1.0-beta3'
     compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
     compile 'de.hdodenhof:circleimageview:2.1.0'
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
 
 androidExtensions {
