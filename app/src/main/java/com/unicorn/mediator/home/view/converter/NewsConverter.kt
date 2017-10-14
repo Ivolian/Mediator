@@ -1,4 +1,4 @@
-package com.unicorn.mediator.home.view.adapter
+package com.unicorn.mediator.home.view.converter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -16,7 +16,7 @@ class NewsConverter(private val context: Context) : Converter<News> {
         bvh.apply {
             Glide.with(context).load(entity.suoluetu[0].attached).into(ivSuoLueTu)
             tvName.text = entity.name
-            tvBiaoQian1.text = "浏览${entity.liulanliang}次"
+            tvLiuLanLiang.text = "浏览${entity.liulanliang}次"
             tvCreateTime.text = entity.createtime_replace
         }
     }

@@ -29,7 +29,7 @@
         tools:ignore="RtlHardcoded,SpUsage" />
 
     <com.flyco.roundview.RoundTextView
-        android:id="@+id/tvBiaoQian1"
+        android:id="@+id/tvLiuLanLiang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -58,7 +58,7 @@
         android:textColor="@color/md_blue_200"
         android:textSize="11dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvBiaoQian1"
+        app:layout_constraintStart_toEndOf="@+id/tvLiuLanLiang"
         app:rv_cornerRadius="100dp"
         app:rv_strokeColor="@color/md_blue_200"
         app:rv_strokeWidth="1px"

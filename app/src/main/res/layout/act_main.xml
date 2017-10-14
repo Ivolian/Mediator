@@ -27,6 +27,7 @@
         android:background="@color/md_grey_300" />
 
     <me.majiajie.pagerbottomtabstrip.PageNavigationView
+        android:background="@color/md_grey_100"
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="56dp" />

@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="wrap_content"
     android:background="@color/md_white"
     android:orientation="horizontal"
-    android:padding="16dp">
+    android:padding="12dp"
+    tools:ignore="RtlHardcoded,SpUsage,ContentDescription">
 
     <ImageView
         android:id="@+id/ivSuoLueTu"
         android:layout_width="100dp"
-        android:layout_height="match_parent"
+        android:layout_height="75dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,23 +22,21 @@
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="12dp"
         android:textColor="@color/md_black"
         android:textSize="16dp"
         app:layout_constraintStart_toEndOf="@+id/ivSuoLueTu"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="RtlHardcoded,SpUsage" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvBiaoQian1"
+        android:id="@+id/tvLiuLanLiang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginLeft="12dp"
         android:textColor="@color/md_grey_600"
         android:textSize="13dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ivSuoLueTu"
-        tools:ignore="RtlHardcoded,SpUsage" />
+        app:layout_constraintStart_toEndOf="@+id/ivSuoLueTu" />
 
     <TextView
         android:id="@+id/tvCreateTime"
