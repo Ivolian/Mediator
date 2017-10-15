@@ -1,6 +1,7 @@
 package com.unicorn.mediator.mediator.view
 
 import android.graphics.BitmapFactory
+import android.os.Bundle
 import android.view.View
 import com.amap.api.maps.CameraUpdateFactory
 import com.amap.api.maps.model.BitmapDescriptorFactory
@@ -9,13 +10,13 @@ import com.amap.api.maps.model.MyLocationStyle
 import com.bumptech.glide.Glide
 import com.unicorn.mediator.R
 import com.unicorn.mediator.app.inject.ComponentsHolder
-import com.unicorn.mediator.app.view.BaseMapAct
+import com.unicorn.mediator.app.view.BaseAct
 import com.unicorn.mediator.mediator.model.entity.Mediator
 import com.unicorn.mediator.mediator.presenter.MediatorMapPresenter
 import kotlinx.android.synthetic.main.act_mediator_map.*
 
 
-class MediatorMapAct : BaseMapAct(), MediatorMapView {
+class MediatorMapAct : BaseAct(), MediatorMapView {
 
     override val layoutResId = R.layout.act_mediator_map
 
@@ -56,8 +57,8 @@ class MediatorMapAct : BaseMapAct(), MediatorMapView {
         clMediatorInfo.visibility = View.VISIBLE
     }
 
-    private val presenter = MediatorMapPresenter(this,
-            ComponentsHolder.appComponent.getMediatorRepository())
+    private val presenter by lazy {   MediatorMapPresenter(this,
+            ComponentsHolder.appComponent.getMediatorRepository())}
 
     override fun bindPresenter() {
         map.apply {
@@ -69,6 +70,32 @@ class MediatorMapAct : BaseMapAct(), MediatorMapView {
             setOnMapTouchListener { clMediatorInfo.visibility = View.INVISIBLE }
         }
         presenter.onViewCreated()
+    }
+
+
+    override fun initView(savedInstanceState: Bundle?) {
+        super.initView(savedInstanceState)
+        mapView.onCreate(savedInstanceState)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mapView.onDestroy()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mapView.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mapView.onPause()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+        mapView.onSaveInstanceState(outState)
     }
 
 }
