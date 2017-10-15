@@ -9,10 +9,6 @@ import com.unicorn.mediator.app.view.BaseFra
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration
 
 
-/**
- * Created by ivotai on 2017/10/9/009.
- */
-
 fun BaseAct.startAct(actClass: Class<*>) {
     startActivity(Intent(this, actClass))
 }
@@ -23,9 +19,7 @@ fun BaseAct.startActAndFinish(actClass: Class<*>) {
 fun BaseFra.startAct(actClass: Class<*>) {
     startActivity(Intent(context, actClass))
 }
-
 fun BaseAct.color(@ColorRes id: Int) = ContextCompat.getColor(this, id)
-
 fun RecyclerView.addDecor() {
     addItemDecoration(
             HorizontalDividerItemDecoration.Builder(this.context)

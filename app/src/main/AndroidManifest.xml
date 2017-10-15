@@ -37,7 +37,7 @@
         </activity>
         <activity android:name=".main.view.MainAct" />
         <activity android:name=".mediator.view.MediatorMapAct" />
-        <activity android:name=".mediation.ApplyMediationAct" />
+        <activity android:name=".mediation.view.ApplyMediationAct" />
     </application>
 
 </manifest>
