@@ -15,7 +15,7 @@ class TopConverter(private val context: Context) : Converter<Top> {
         bvh.apply {
             Glide.with(context).load(entity.resId).into(imageView)
             tvText.text = entity.text
-            addOnClickListener(R.id.tvText)
+            addOnClickListener(R.id.item)
         }
     }
 

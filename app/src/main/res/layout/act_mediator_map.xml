@@ -27,13 +27,14 @@
 
         <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/clMediatorInfo"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
             android:background="@mipmap/bg_corner_s_white_with_grayline"
             android:clickable="true"
             android:orientation="horizontal"
-            android:padding="16dp"
+            android:padding="24dp"
             android:visibility="invisible"
             tools:ignore="HardcodedText,KeyboardInaccessibleWidget,RtlHardcoded,SpUsage">
 
@@ -112,9 +113,9 @@
                 app:rv_strokeWidth="1px" />
 
             <com.flyco.roundview.RoundTextView
-                android:id="@+id/tvApplyForMediation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
                 android:paddingBottom="3dp"
                 android:paddingLeft="6dp"
                 android:paddingRight="6dp"
@@ -123,7 +124,7 @@
                 android:textColor="@color/md_orange_a400"
                 android:textSize="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvTag3"
                 app:layout_constraintTop_toTopOf="parent"
                 app:rv_cornerRadius="5dp"
                 app:rv_strokeColor="@color/md_orange_a400"
