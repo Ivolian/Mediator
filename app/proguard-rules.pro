@@ -48,6 +48,10 @@
 }
 
 -dontwarn com.amap.api.location.**
+-dontwarn com.unicorn.mediator.mediation.model.entity.**
+-dontwarn com.unicorn.mediator.mediator.view.**
+
+-dontwarn kotlin.reflect.jvm.internal.**
 
 -keep   class com.amap.api.maps.**{*;}
 -keep   class com.autonavi.**{*;}
