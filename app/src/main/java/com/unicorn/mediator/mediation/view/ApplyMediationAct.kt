@@ -2,11 +2,13 @@ package com.unicorn.mediator.mediation.view
 
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.TextView
 import com.blankj.utilcode.util.ToastUtils
 import com.jakewharton.rxbinding2.view.RxView
 import com.unicorn.mediator.R
+import com.unicorn.mediator.app.inject.ComponentsHolder
 import com.unicorn.mediator.app.view.BaseAct
+import com.unicorn.mediator.mediation.model.constant.MeidationStatus
+import com.unicorn.mediator.mediation.model.entity.Mediation
 import com.unicorn.mediator.mediation.view.ui.BottomSheetListener
 import com.unicorn.mediator.mediation.view.ui.BottomSheetStarter
 import kotlinx.android.synthetic.main.act_apply_mediation.*
@@ -18,6 +20,8 @@ class ApplyMediationAct : BaseAct() {
     override val layoutResId = R.layout.act_apply_mediation
     private val caseType = arrayListOf("领里纠纷", "损坏赔偿", "劳动争议", "医疗纠纷", "婚姻家庭", "环境污染")
     private val documentType = arrayListOf("身份证", "军官证", "护照", "港澳通行证")
+
+    private val repo = ComponentsHolder.appComponent.getMediationRepository()
 
     override fun initView(savedInstanceState: Bundle?) {
         tvAcceptor.text = "受理人1"
@@ -61,7 +65,17 @@ class ApplyMediationAct : BaseAct() {
                         }
                     }
                     if (result) {
-                        // todo
+                        repo.put(Mediation(
+                                acceptor = tvAcceptor.text.toString().trim(),
+                                applicant = tvApplicant.text.toString().trim(),
+                                respondent = etRespondent.text.toString().trim(),
+                                caseType = tvCaseType.text.toString().trim(),
+                                caseTitle = etCaseTitle.text.toString().trim(),
+                                caseAddress = etCaseAddress.text.toString().trim(),
+                                documentType = tvDocumentType.text.toString().trim(),
+                                documentNum = etDocumentNum.text.toString().trim(),
+                                mediationStatus = MeidationStatus.Checking.ordinal
+                        ))
                         ToastUtils.showShort("调解申请已提交")
                         finish()
                     }

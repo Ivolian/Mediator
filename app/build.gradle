@@ -62,8 +62,15 @@ dependencies {
     compile 'me.shaohui:bottomdialog:1.1.9'
     compile 'com.weigan:loopView:0.1.2'
     compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    debugImplementation "io.objectbox:objectbox-android-objectbrowser:$objectbox_version"
+    releaseImplementation "io.objectbox:objectbox-android:$objectbox_version"
+    implementation ("io.objectbox:objectbox-rxjava:$objectbox_rxjava_version"){
+        exclude(group: 'io.objectbox', module: 'objectbox-java')
+    }
 }
 
 androidExtensions {
     experimental = true
 }
+
+apply plugin: 'io.objectbox'

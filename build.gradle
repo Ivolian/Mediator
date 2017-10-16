@@ -11,15 +11,18 @@ buildscript {
     ext.BRVAH_version = "2.9.31"
     ext.okhttp_version = '3.9.0'
     ext.retrofit_version = '2.3.0'
+    ext.objectbox_version = '1.1.0'
+    ext.objectbox_rxjava_version = '0.9.8'
 
     repositories {
         google()
         jcenter()
+        maven { url "http://objectbox.net/beta-repo/" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.0-rc1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-
+        classpath "io.objectbox:objectbox-gradle-plugin:$objectbox_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -30,6 +33,7 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
+        maven { url "http://objectbox.net/beta-repo/" }
         maven { url 'http://github.com/wada811/Android-Material-Design-Colors/raw/master/repository/' }
     }
 }
