@@ -1,270 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/md_grey_100"
-    android:orientation="vertical"
-    tools:ignore="HardcodedText,RtlHardcoded,SpUsage,ContentDescription,TextFields">
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="调解申请"
-        android:textColor="@color/md_white"
-        android:textSize="18dp" />
-
-    <LinearLayout
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:background="@color/md_grey_100"
+        android:orientation="vertical"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage,ContentDescription,TextFields">
 
         <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="受理人"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="调解申请"
+            android:textColor="@color/md_white"
+            android:textSize="18dp" />
 
-        <TextView
-            android:id="@+id/tvAcceptor"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/md_grey_600"
-            android:textSize="16dp" />
+            android:layout_marginTop="12dp"
+            android:background="@color/md_white"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="受理人"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvAcceptor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_grey_600"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/md_white"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="申请人"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvApplicant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_grey_600"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/md_white"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="被申请人"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/etRespondent"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:maxLines="2"
+                android:textColor="@color/md_grey_600"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/md_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="案件类型"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvCaseType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择"
+                android:textColor="@color/md_grey_600"
+                android:textColorHint="@color/md_grey_600"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/md_white"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="案件标题"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/etCaseTitle"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:maxLines="2"
+                android:textColor="@color/md_grey_600"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/md_white"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="案件地址"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/etCaseAddress"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:maxLines="2"
+                android:textColor="@color/md_grey_600"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/md_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="证件类型"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvDocumentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="请选择"
+                android:textColor="@color/md_grey_600"
+                android:textColorHint="@color/md_grey_600"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/more" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:background="@color/md_white"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="证件号"
+                android:textColor="@color/md_black"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/etDocumentNum"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:maxLines="2"
+                android:textColor="@color/md_grey_600"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tvSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="提交申请"
+            android:textColor="@color/md_white"
+            android:textSize="16dp"
+            app:rv_backgroundColor="@color/colorPrimary"
+            app:rv_cornerRadius="100dp" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1px"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="申请人"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/tvApplicant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/md_grey_600"
-            android:textSize="16dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1px"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="被申请人"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
-
-        <EditText
-            android:id="@+id/etRespondent"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:gravity="right"
-            android:maxLines="2"
-            android:textColor="@color/md_grey_600"
-            android:textSize="16dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="案件类型"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/tvCaseType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="请选择"
-            android:textColor="@color/md_grey_600"
-            android:textColorHint="@color/md_grey_600"
-            android:textSize="16dp" />
-
-        <ImageView
-            android:layout_width="8dp"
-            android:layout_height="16dp"
-            android:layout_marginLeft="8dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/more" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1px"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="案件标题"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
-
-        <EditText
-            android:id="@+id/etCaseTitle"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:gravity="right"
-            android:maxLines="2"
-            android:textColor="@color/md_grey_600"
-            android:textSize="16dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1px"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="案件地址"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
-
-        <EditText
-            android:id="@+id/etCaseAddress"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:gravity="right"
-            android:maxLines="2"
-            android:textColor="@color/md_grey_600"
-            android:textSize="16dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="证件类型"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/tvDocumentType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="请选择"
-            android:textColor="@color/md_grey_600"
-            android:textColorHint="@color/md_grey_600"
-            android:textSize="16dp" />
-
-        <ImageView
-            android:layout_width="8dp"
-            android:layout_height="16dp"
-            android:layout_marginLeft="8dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/more" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1px"
-        android:background="@color/md_white"
-        android:orientation="horizontal"
-        android:padding="16dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="证件号"
-            android:textColor="@color/md_black"
-            android:textSize="16dp" />
-
-        <EditText
-            android:id="@+id/etDocumentNum"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:gravity="right"
-            android:maxLines="2"
-            android:textColor="@color/md_grey_600"
-            android:textSize="16dp" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <com.flyco.roundview.RoundTextView
-        android:id="@+id/tvSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:padding="12dp"
-        android:text="提交申请"
-        android:textColor="@color/md_white"
-        android:textSize="16dp"
-        app:rv_backgroundColor="@color/colorPrimary"
-        app:rv_cornerRadius="100dp" />
-
-</LinearLayout>
+</ScrollView>

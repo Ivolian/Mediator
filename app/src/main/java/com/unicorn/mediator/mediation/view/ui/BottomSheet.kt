@@ -3,7 +3,6 @@ package com.unicorn.mediator.mediation.view.ui
 import activitystarter.Arg
 import android.view.View
 import android.widget.TextView
-import com.blankj.utilcode.util.ConvertUtils
 import com.marcinmoskala.activitystarter.argExtra
 import com.unicorn.mediator.R
 import com.weigan.loopview.LoopView
