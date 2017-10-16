@@ -22,12 +22,22 @@ class MediationListFra : BaseFra() {
     private val repo = ComponentsHolder.appComponent.getMediationRepository()
 
     override fun initView(savedInstanceState: Bundle?) {
-        recyclerView.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = mediationAdapter
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        mediationAdapter.apply {
+            bindToRecyclerView(recyclerView)
+            setEmptyView(R.layout.view_empty)
         }
-
         repo.get(mediationStatusName).let { mediationAdapter.setNewData(it) }
+        mediationAdapter.setOnItemClickListener { _, _, pos ->
+            mediationAdapter.getItem(pos).let {
+                MediationDetailActStarter.start(context, it)
+            }
+        }
+        swipeRefreshLayout.setColorSchemeResources(R.color.colorPrimary)
+        swipeRefreshLayout.setOnRefreshListener {
+            repo.get(mediationStatusName).let { mediationAdapter.setNewData(it) }
+            swipeRefreshLayout.isRefreshing = false
+        }
     }
 
 }

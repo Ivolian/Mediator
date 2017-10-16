@@ -4,63 +4,76 @@
   "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
   "entities": [
     {
-      "id": "1:6614240192932898249",
-      "lastPropertyId": "10:8270595216897936490",
-      "name": "Meidation",
+      "id": "2:1360002640484486405",
+      "lastPropertyId": "10:3576409669323493804",
+      "name": "Mediation",
       "properties": [
         {
-          "id": "1:4423081429698481527",
+          "id": "1:191012620569616649",
           "name": "_id"
         },
         {
-          "id": "2:415653551935905670",
+          "id": "2:1510865398471121772",
           "name": "acceptor"
         },
         {
-          "id": "3:7076861652389547250",
+          "id": "3:2280562239956422814",
           "name": "applicant"
         },
         {
-          "id": "4:1260616051996815196",
+          "id": "4:2558359615786215291",
           "name": "respondent"
         },
         {
-          "id": "5:3837283565989619547",
+          "id": "5:2189622892199208990",
           "name": "caseType"
         },
         {
-          "id": "6:910666591028731192",
+          "id": "6:7360441694100133166",
           "name": "caseTitle"
         },
         {
-          "id": "7:8742372028984091115",
+          "id": "7:2133462118356204647",
           "name": "caseAddress"
         },
         {
-          "id": "8:3840636802001634292",
+          "id": "8:5074788445715804006",
           "name": "documentType"
         },
         {
-          "id": "9:8392433503410603200",
+          "id": "9:4057816396847840600",
           "name": "documentNum"
         },
         {
-          "id": "10:8270595216897936490",
-          "name": "meidationStatus"
+          "id": "10:3576409669323493804",
+          "name": "mediationStatus"
         }
       ],
       "relations": []
     }
   ],
-  "lastEntityId": "1:6614240192932898249",
+  "lastEntityId": "2:1360002640484486405",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
   "modelVersion": 4,
   "modelVersionParserMinimum": 4,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    6614240192932898249
+  ],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    4423081429698481527,
+    415653551935905670,
+    7076861652389547250,
+    1260616051996815196,
+    3837283565989619547,
+    910666591028731192,
+    8742372028984091115,
+    3840636802001634292,
+    8392433503410603200,
+    8270595216897936490
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

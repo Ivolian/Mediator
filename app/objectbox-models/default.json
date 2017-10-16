@@ -5,7 +5,7 @@
   "entities": [
     {
       "id": "2:1360002640484486405",
-      "lastPropertyId": "10:3576409669323493804",
+      "lastPropertyId": "11:895001059167566328",
       "name": "Mediation",
       "properties": [
         {
@@ -45,8 +45,8 @@
           "name": "documentNum"
         },
         {
-          "id": "10:3576409669323493804",
-          "name": "mediationStatus"
+          "id": "11:895001059167566328",
+          "name": "mediationStatusName"
         }
       ],
       "relations": []
@@ -72,7 +72,8 @@
     8742372028984091115,
     3840636802001634292,
     8392433503410603200,
-    8270595216897936490
+    8270595216897936490,
+    3576409669323493804
   ],
   "retiredRelationUids": [],
   "version": 1

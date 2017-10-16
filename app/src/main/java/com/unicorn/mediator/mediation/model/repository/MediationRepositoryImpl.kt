@@ -13,7 +13,7 @@ class MediationRepositoryImpl(private val box: Box<Mediation>) : MediationReposi
 
     override fun get(mediationStatusName: String): List<Mediation> {
         return box.query()
-                .equal(Mediation_.mediationStatus, mediationStatusName)
+                .equal(Mediation_.mediationStatusName, mediationStatusName)
                 .build().find()
     }
 
