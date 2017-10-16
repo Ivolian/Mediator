@@ -61,7 +61,7 @@ dependencies {
     compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
     compile 'me.shaohui:bottomdialog:1.1.9'
     compile 'com.weigan:loopView:0.1.2'
-
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
 }
 
 androidExtensions {
