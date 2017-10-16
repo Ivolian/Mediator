@@ -74,7 +74,7 @@ class ApplyMediationAct : BaseAct() {
                                 caseAddress = etCaseAddress.text.toString().trim(),
                                 documentType = tvDocumentType.text.toString().trim(),
                                 documentNum = etDocumentNum.text.toString().trim(),
-                                mediationStatus = MediationStatus.Checking.ordinal
+                                mediationStatus = MediationStatus.Checking.name
                         ))
                         ToastUtils.showShort("调解申请已提交")
                         finish()

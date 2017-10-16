@@ -7,5 +7,7 @@ interface MediationRepository {
 
     fun put(mediation: Mediation)
 
+    fun get(mediationStatusName: String):List<Mediation>
+
 }
 

@@ -38,14 +38,15 @@ class SplashPresenter(private val view: SplashView) : BasePresenter {
         }
     }
 
-    private fun showRoleDialog(){
-        MaterialDialog.Builder( view as BaseAct)
-                .title("选择用户角色")
-                .items(listOf("申请人","受理人"))
-                .itemsCallback({dialog, itemView, position, text -> UserInfo.role = text.toString()
+    private fun showRoleDialog() {
+        MaterialDialog.Builder(view as BaseAct)
+                .title("选择角色")
+                .items(listOf("申请人", "受理人"))
+                .itemsCallback({ _, _, _, text ->
+                    UserInfo.role = text.toString()
                     Observable.just("delay")
                             .delay(1, TimeUnit.SECONDS)
-                            .subscribe {  (view as BaseAct).startActAndFinish(MainAct::class.java) }
+                            .subscribe { (view as BaseAct).startActAndFinish(MainAct::class.java) }
                 })
                 .show()
     }

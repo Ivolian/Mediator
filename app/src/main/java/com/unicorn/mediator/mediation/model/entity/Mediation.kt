@@ -16,6 +16,6 @@ class Mediation(
         var caseAddress: String,
         var documentType: String,
         var documentNum: String,
-        var mediationStatus: Int
+        var mediationStatus: String
 )
 
