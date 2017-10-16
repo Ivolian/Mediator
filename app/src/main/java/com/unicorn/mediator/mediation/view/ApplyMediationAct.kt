@@ -7,7 +7,7 @@ import com.jakewharton.rxbinding2.view.RxView
 import com.unicorn.mediator.R
 import com.unicorn.mediator.app.inject.ComponentsHolder
 import com.unicorn.mediator.app.view.BaseAct
-import com.unicorn.mediator.mediation.model.constant.MeidationStatus
+import com.unicorn.mediator.mediation.model.constant.MediationStatus
 import com.unicorn.mediator.mediation.model.entity.Mediation
 import com.unicorn.mediator.mediation.view.ui.BottomSheetListener
 import com.unicorn.mediator.mediation.view.ui.BottomSheetStarter
@@ -74,7 +74,7 @@ class ApplyMediationAct : BaseAct() {
                                 caseAddress = etCaseAddress.text.toString().trim(),
                                 documentType = tvDocumentType.text.toString().trim(),
                                 documentNum = etDocumentNum.text.toString().trim(),
-                                mediationStatus = MeidationStatus.Checking.ordinal
+                                mediationStatus = MediationStatus.Checking.ordinal
                         ))
                         ToastUtils.showShort("调解申请已提交")
                         finish()
