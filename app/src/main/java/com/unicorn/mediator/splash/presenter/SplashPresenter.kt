@@ -1,8 +1,10 @@
 package com.unicorn.mediator.splash.presenter
 
 import android.Manifest
+import com.afollestad.materialdialogs.MaterialDialog
 import com.blankj.utilcode.util.ToastUtils
 import com.tbruyelle.rxpermissions2.RxPermissions
+import com.unicorn.mediator.UserInfo
 import com.unicorn.mediator.app.presenter.BasePresenter
 import com.unicorn.mediator.app.view.BaseAct
 import com.unicorn.mediator.main.view.MainAct
@@ -27,9 +29,7 @@ class SplashPresenter(private val view: SplashView) : BasePresenter {
                             Manifest.permission.ACCESS_COARSE_LOCATION)
                     .subscribe { granted ->
                         if (granted) {
-                            Observable.just("delay")
-                                    .delay(2, TimeUnit.SECONDS)
-                                    .subscribe { startActAndFinish(MainAct::class.java) }
+                            showRoleDialog()
                         } else {
                             ToastUtils.showShort("未授予权限")
                             finish()
@@ -38,4 +38,17 @@ class SplashPresenter(private val view: SplashView) : BasePresenter {
         }
     }
 
+    private fun showRoleDialog(){
+        MaterialDialog.Builder( view as BaseAct)
+                .title("选择用户角色")
+                .items(listOf("申请人","受理人"))
+                .itemsCallback({dialog, itemView, position, text -> UserInfo.role = text.toString()
+                    Observable.just("delay")
+                            .delay(1, TimeUnit.SECONDS)
+                            .subscribe {  (view as BaseAct).startActAndFinish(MainAct::class.java) }
+                })
+                .show()
+    }
+
 }
+

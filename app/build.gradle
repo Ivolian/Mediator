@@ -67,6 +67,7 @@ dependencies {
     implementation ("io.objectbox:objectbox-rxjava:$objectbox_rxjava_version"){
         exclude(group: 'io.objectbox', module: 'objectbox-java')
     }
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.5'
 }
 
 androidExtensions {

@@ -1,0 +1,66 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:6614240192932898249",
+      "lastPropertyId": "10:8270595216897936490",
+      "name": "Meidation",
+      "properties": [
+        {
+          "id": "1:4423081429698481527",
+          "name": "_id"
+        },
+        {
+          "id": "2:415653551935905670",
+          "name": "acceptor"
+        },
+        {
+          "id": "3:7076861652389547250",
+          "name": "applicant"
+        },
+        {
+          "id": "4:1260616051996815196",
+          "name": "respondent"
+        },
+        {
+          "id": "5:3837283565989619547",
+          "name": "caseType"
+        },
+        {
+          "id": "6:910666591028731192",
+          "name": "caseTitle"
+        },
+        {
+          "id": "7:8742372028984091115",
+          "name": "caseAddress"
+        },
+        {
+          "id": "8:3840636802001634292",
+          "name": "documentType"
+        },
+        {
+          "id": "9:8392433503410603200",
+          "name": "documentNum"
+        },
+        {
+          "id": "10:8270595216897936490",
+          "name": "meidationStatus"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:6614240192932898249",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
